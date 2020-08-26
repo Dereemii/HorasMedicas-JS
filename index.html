@@ -16,21 +16,32 @@
             <h1>Reserva de Horas Médicas</h1>
         </div>
         <div class="formulario row border border-dark p-3">
-            <input type="number" id="rut" class="col-md-12 my-2" placeholder="Ingrese RUT">
-            <input type="text" id="nombres" class="col-md-12 my-2" placeholder="Ingrese Nombres">
-            <input type="text" id="apellidos" class="col-md-12 my-2" placeholder="Ingrese Apellidos">
-            <input type="number" id="edad" class="col-md-12 my-2" placeholder="Ingrese Edad">
-            <input type="email" id="email" class="col-md-12 my-2" placeholder="Ingrese Email">
-            <label for="especialidad">Escoga especialidad:</label>
-            <select type="text" id="especialidad" class="col-md-12 mb-2" placeholder="Ingrese Especialidad">
-                <option value="traumatologia" id="traumatologia">Traumatologia</option>
-                <option value="radiologia" id="radiologia">Radiologia</option>
-                <option value="dental" id="dental" >Dental</option>
-            </select>
-            <input type="date" id="fecha" class="col-md-12 my-2" placeholder="Ingrese Fecha">
-            <input type="time" id="hora" class="col-md-12 my-2">
-
-            <button id="boton" class="text-center">Reservar</button>
+            <form action="">
+                <input type="number" id="rut" class="col-md-12 my-2" placeholder="Ingrese RUT" required>
+                <input type="text" id="nombres" class="col-md-12 my-2" placeholder="Ingrese Nombres" required>
+                <input type="text" id="apellidos" class="col-md-12 my-2" placeholder="Ingrese Apellidos" required>
+                <input type="number" id="edad" class="col-md-12 my-2" placeholder="Ingrese Edad" required>
+                <input type="email" id="email" class="col-md-12 my-2" placeholder="Ingrese Email" required>
+                <label for="especialidad">Escoja especialidad:</label>
+                <select name="especialidad" id="especialidad" class="col-md-12 mb-2" required>
+                    <option value="traumatologia" id="traumatologia">Traumatologia</option>
+                    <option value="radiologia" id="radiologia">Radiologia</option>
+                    <option value="dental" id="dental">Dental</option>
+                </select>
+                <input type="date" id="fecha" class="col-md-12 my-2" placeholder="Ingrese Fecha" required>
+                <label for="time">Escoja su hora de atención:</label>
+                 <select name="horas" id="hora" class="col-md-12 mb-2" required>
+                    <option value="hora1">8:00</option>
+                    <option value="hora2">8:30</option>
+                    <option value="hora3">9:00</option>
+                    <option value="hora4">9:30</option>
+                    <option value="hora5">10:00</option>
+                    <option value="hora6">10:30</option>
+                    <option value="hora7">11:00</option>
+                    <option value="hora8">11:30</option>
+                    <option value="hora8">12:00</option>
+                <input type="submit" id="boton" class="text-center" value="Reservar">
+            </form>
         </div>
 
     </div>
