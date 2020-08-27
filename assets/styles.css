@@ -1,6 +1,6 @@
 
 .icono{
-    font-size: 40px;
+    font-size: 27px;
     color: #f6f5f5;
 }
 
@@ -11,11 +11,12 @@ body{
 
 .container{
     background-color: #68b0ab;
-    width:30em;
+    width:28em;
 }
 
 .titulo{
-    color: #16213e
+    color: #16213e;
+    padding-top: 5px;
 }
 
 .border-aqua{
@@ -42,4 +43,9 @@ span{
     font-family: monospace;
     font-size: 16px;
     background-color: #a3d2ca
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 700;
 }

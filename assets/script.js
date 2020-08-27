@@ -22,22 +22,18 @@ limpiarEdad = () => {
 };
 
 // LIMPIAR SPAN
-
 limpiarSpanRut = () =>{
     let limpiar = document.getElementById("rut1");
     limpiar.innerHTML = "";
 };
-
 limpiarSpanNombres = () =>{
     let limpiar = document.getElementById("nombres1");
     limpiar.innerHTML = "";
 };
-
 limpiarSpanApellidos = () =>{
     let limpiar = document.getElementById("apellidos1");
     limpiar.innerHTML = "";
 };
-
 limpiarSpanEdad = () => {
     let limpiar = document.getElementById("edad1");
     limpiar.innerHTML = "";
@@ -46,9 +42,12 @@ limpiarSpanCorreo = () => {
     let limpiar = document.getElementById("email1");
     limpiar.innerHTML = "";
 }
+limpiarSpanFecha = () => {
+    let limpiar = document.getElementById("fecha1");
+    limpiar.innerHTML = "";
+}
      
 /// VALIDAR RUT
-
 validarRut = () => {
     var rut = document.getElementById("rut").value
     const rut1 = document.getElementById("rut1")
@@ -63,7 +62,6 @@ validarRut = () => {
 };
 
 //VALIDAR NOMBRES
-
 validarNombres = () => {
     let nombres = document.getElementById("nombres").value
     const nombres1 = document.getElementById("nombres1")
@@ -77,7 +75,7 @@ validarNombres = () => {
     }
 };
 
-//Validar Apellidos
+//VALIDAR APELLIDOS
 validarApellidos = () => {
     let apellidos = document.getElementById("apellidos").value
     const apellidos1 = document.getElementById("apellidos1");
@@ -91,7 +89,7 @@ validarApellidos = () => {
     }
 };
 
-//Validar Edad
+//VALIDAR EDAD
 validarEdad = () =>{
     let edad = document.getElementById("edad").value
     const edad1 = document.getElementById("edad1");
@@ -105,7 +103,7 @@ validarEdad = () =>{
     }
 };
 
-//Validar Correo
+//VALIDAR CORREO
 validarCorreo = () =>{
     let email = document.getElementById("email").value
     const email1 = document.getElementById("email1");
@@ -119,6 +117,18 @@ validarCorreo = () =>{
     }
 };
 
+//VALIDAR FECHA
+validarFecha = () =>{
+    let fecha = document.getElementById("fecha").value
+    const fecha1 = document.getElementById("fecha1");
+    const expresionFecha = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+    if(fecha.match(expresionFecha)){
+        console.log(fecha);
+        limpiarSpanFecha();
+    } else{
+        fecha1.textContent = "formato: dd/mm/aaaa"
+    }
+};
 
 
 //Validaciones extra
@@ -143,4 +153,9 @@ console.log("expresionEdad =>", expresionEdad.test(edad))
 var letras = "aa"
 const expresionLetras = /[a-zA-ZäöüßÄÖÜ]/
 console.log("letras =>", expresionLetras.test(letras))
+
+var fecha = "01/01/2000";
+const regex = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/
+
+console.log("regex =>", regex.test(fecha));
 */
