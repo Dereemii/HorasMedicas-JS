@@ -60,7 +60,6 @@ validarRut = () => {
         limpiarRut();
     }
 };
-
 //VALIDAR NOMBRES
 validarNombres = () => {
     let nombres = document.getElementById("nombres").value
@@ -74,7 +73,6 @@ validarNombres = () => {
         limpiarNombres();
     }
 };
-
 //VALIDAR APELLIDOS
 validarApellidos = () => {
     let apellidos = document.getElementById("apellidos").value
@@ -88,7 +86,6 @@ validarApellidos = () => {
         limpiarApellidos();
     }
 };
-
 //VALIDAR EDAD
 validarEdad = () =>{
     let edad = document.getElementById("edad").value
@@ -102,7 +99,6 @@ validarEdad = () =>{
         limpiarEdad()
     }
 };
-
 //VALIDAR CORREO
 validarCorreo = () =>{
     let email = document.getElementById("email").value
@@ -116,7 +112,6 @@ validarCorreo = () =>{
         limpiarEmail();
     }
 };
-
 //VALIDAR FECHA
 validarFecha = () =>{
     let fecha = document.getElementById("fecha").value
@@ -129,6 +124,38 @@ validarFecha = () =>{
         fecha1.textContent = "formato: dd/mm/aaaa"
     }
 };
+
+//SUBMIT - RESERVAR
+var botonSubmit = document.getElementById("boton")
+botonSubmit.addEventListener("click", function(evento){
+    evento.preventDefault();
+    let fecha = document.getElementById("fecha").value
+    let email = document.getElementById("email").value
+    let edad = document.getElementById("edad").value
+    let apellidos = document.getElementById("apellidos").value
+    let nombres = document.getElementById("nombres").value
+    let rut = document.getElementById("rut").value
+    let especialidad = document.getElementById("especialidad").selectedIndex;
+    let opcionesEspecialidad = document.getElementById("especialidad").options;
+    let hora = document.getElementById("hora").value;
+
+    if(fecha == ""){
+        alert("fecha vacio")
+    } else if (email == ""){
+        alert("email vacío")
+    } else if (edad == ""){
+        alert("edad vacío")
+    } else if(apellidos == ""){
+        alert("apellidos vacío")
+    } else if(nombres == ""){
+        alert("nombres vacío")
+    } else if(rut == ""){
+        alert("campo rut vacío")
+    } else {
+        alert("hola")
+    }
+
+})
 
 
 //Validaciones extra
