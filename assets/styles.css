@@ -1,2 +1,37 @@
 
+.icono{
+    font-size: 40px;
+    color: #faf3dd;
+}
 
+body{
+    background-color: #f6f5f5;
+    font-weight: 500;
+}
+
+.container{
+    background-color: #68b0ab;
+    width:30em;
+}
+
+.titulo{
+    color: #16213e
+}
+
+.border-aqua{
+    border: 6px solid #a3d2ca
+}
+
+#boton{
+    border-radius: 2em;
+    background-color:  #056676;
+    color: #faf3dd;
+    border: none;
+    font-weight:600;
+    font-size: 15pt;
+}
+
+#boton:hover{
+    background-color: #a3d2ca;
+    color: #056676;
+}

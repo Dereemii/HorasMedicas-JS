@@ -4,24 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="stylesheet" href="./assets/styles.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="titulo">
-            <h1>Reserva de Horas Médicas</h1>
+    <div class="container mt-4  border-aqua">
+        <div class="titulo text-center">
+            <h1 class="d-inline">Reserva de Horas Médicas</h1>
+            <i class="fas fa-hospital-user d-inline icono mx-2"></i>
         </div>
-        <div class="formulario row border border-dark p-3">
-            <form action="">
-                <input type="number" id="rut" class="col-md-12 my-2" placeholder="Ingrese RUT" required>
-                <input type="text" id="nombres" class="col-md-12 my-2" placeholder="Ingrese Nombres" required>
+        <div class="formulario row p-3">
+            <form action="" method="POST">
+                <label for="rut">Ingrese rut del paciente:</label>
+                <input name="rut" type="number" id="rut" class="col-md-12 mb-2" placeholder="Formato: 11.111.111-1" required>
+                <label for="nombres">Ingrese ambos nombres:</label>
+                <input name="nombres" type="text" id="nombres" class="col-md-12 mb-2" placeholder="Ejemplo: Rosa Espinoza" required>
                 <input type="text" id="apellidos" class="col-md-12 my-2" placeholder="Ingrese Apellidos" required>
                 <input type="number" id="edad" class="col-md-12 my-2" placeholder="Ingrese Edad" required>
-                <input type="email" id="email" class="col-md-12 my-2" placeholder="Ingrese Email" required>
+                <label for="email">Ingrese correo electrónico:</label>
+                <input name="email" type="email" id="email" class="col-md-12 mb-2" placeholder="Formato: micorreo@mail.com" required>
                 <label for="especialidad">Escoja especialidad:</label>
                 <select name="especialidad" id="especialidad" class="col-md-12 mb-2" required>
                     <option value="traumatologia" id="traumatologia">Traumatologia</option>
@@ -40,8 +46,9 @@
                     <option value="hora7">11:00</option>
                     <option value="hora8">11:30</option>
                     <option value="hora8">12:00</option>
-                <input type="submit" id="boton" class="text-center" value="Reservar">
+                <input type="submit" id="boton" class="p-2 mt-2 col-md" value="Reservar">
             </form>
+            
         </div>
 
     </div>
