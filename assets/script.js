@@ -1,69 +1,123 @@
 
-//Limpiar Input incorrecto
+//LIMPIAR INPUT INCORRECTOS
 limpiarEmail = () => {
     let limpiar = document.getElementById("email");
-    limpiar.value = " ";
+    limpiar.value = "";
 };
 limpiarRut = () =>{
     let limpiar = document.getElementById("rut");
-    limpiar.value = " ";
+    limpiar.value = "";
 };
 limpiarNombres = () => {
     let limpiar = document.getElementById("nombres");
-    limpiar.value = " ";
+    limpiar.value = "";
 };
 limpiarApellidos = () => {
     let limpiar = document.getElementById("apellidos");
-    limpiar.value = " ";
+    limpiar.value = "";
 };
 limpiarEdad = () => {
     let limpiar = document.getElementById("edad");
-    limpiar.value = " ";
+    limpiar.value = "";
 };
 
-//Validar Rut
+// LIMPIAR SPAN
+
+limpiarSpanRut = () =>{
+    let limpiar = document.getElementById("rut1");
+    limpiar.innerHTML = "";
+};
+
+limpiarSpanNombres = () =>{
+    let limpiar = document.getElementById("nombres1");
+    limpiar.innerHTML = "";
+};
+
+limpiarSpanApellidos = () =>{
+    let limpiar = document.getElementById("apellidos1");
+    limpiar.innerHTML = "";
+};
+
+limpiarSpanEdad = () => {
+    let limpiar = document.getElementById("edad1");
+    limpiar.innerHTML = "";
+};
+limpiarSpanCorreo = () => {
+    let limpiar = document.getElementById("email1");
+    limpiar.innerHTML = "";
+}
+     
+/// VALIDAR RUT
+
 validarRut = () => {
     var rut = document.getElementById("rut").value
+    const rut1 = document.getElementById("rut1")
     const expresionRut = /^\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}$/;
     if(rut.match(expresionRut)){
         console.log(rut);
+        limpiarSpanRut();
     } else{
-        alert("Ingrese un rut válido")
+        rut1.textContent = "xx.xxx.xxx-x puntos y guión";
         limpiarRut();
     }
 };
 
+//VALIDAR NOMBRES
 
-//Validar Nombre
 validarNombres = () => {
     let nombres = document.getElementById("nombres").value
-    const expresionNombres 
-}
+    const nombres1 = document.getElementById("nombres1")
+    const expresionNombres  = /[a-zA-ZäöüßÄÖÜ]/
+    if(nombres.match(expresionNombres)){
+        console.log(nombres);
+        limpiarSpanNombres();
+    } else{
+        nombres1.textContent = "Ingrese sólo letras";
+        limpiarNombres();
+    }
+};
 
 //Validar Apellidos
 validarApellidos = () => {
     let apellidos = document.getElementById("apellidos").value
-    const expresionApellidos
-}
+    const apellidos1 = document.getElementById("apellidos1");
+    const expresionApellidos = /(\w.+\s).+/
+    if(apellidos.match(expresionApellidos)){
+        console.log(apellidos);
+        limpiarSpanApellidos();
+    } else{
+        apellidos1.textContent = "Ingrese 2 apellidos"
+        limpiarApellidos();
+    }
+};
 
 //Validar Edad
 validarEdad = () =>{
     let edad = document.getElementById("edad").value
-    const expresionEdad
-}
+    const edad1 = document.getElementById("edad1");
+    const expresionEdad = /^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$/
+    if(edad.match(expresionEdad)){
+        console.log(edad);
+        limpiarSpanEdad();
+    }else{
+        edad1.textContent = "Sólo ingrese números"
+        limpiarEdad()
+    }
+};
 
 //Validar Correo
 validarCorreo = () =>{
     let email = document.getElementById("email").value
+    const email1 = document.getElementById("email1");
     const expresionCorreo =  /[a-z 1-9]{1,100}\@[a-z]{1,10}\.[a-z]{2,3}$/gmi;
     if(email.match(expresionCorreo)){
-        console.log(email)
+        console.log(email);
+        limpiarSpanCorreo();
     } else{
-        alert("Favor ingresar correo válido")
-        console.log(email)
-        limpiarInput();
+        email1.textContent = "Ingrese mail válido"
+        limpiarEmail();
     }
-}
+};
 
 
 
@@ -76,4 +130,17 @@ console.log("expresionCorreo =>", expresionCorreo.test(correo))
 
 var rut = "17.623.177-7"
 const expresionRut = /^\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}$/;
-console.log("expresionRut =>", expresionRut.test(rut)) */
+console.log("expresionRut =>", expresionRut.test(rut)) 
+
+var nombre = "hello kitty"
+const expresionNombres  = /(\w.+\s).+/
+console.log("expresionNombres =>", expresionNombres.test(nombre))
+
+var edad = "a"
+const expresionEdad = /^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$/
+console.log("expresionEdad =>", expresionEdad.test(edad))
+
+var letras = "aa"
+const expresionLetras = /[a-zA-ZäöüßÄÖÜ]/
+console.log("letras =>", expresionLetras.test(letras))
+*/

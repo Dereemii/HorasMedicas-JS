@@ -20,19 +20,19 @@
         </div>
         <div class="formulario row p-3">
             <form action="" method="POST">
-                <label for="rut">Ingrese rut del paciente:</label>
+                <label for="rut">Ingrese rut del paciente:</label> <span id="rut1"></span>
                 <input onblur="validarRut()" name="rut" type="text" id="rut" class="inputFormulario col-md-12 mb-2" placeholder="Formato: 11.111.111-1"
                     >
-                <label for="nombres">Ingrese ambos nombres del paciente:</label>
+                <label for="nombres">Ingrese ambos nombres del paciente:</label> <span id="nombres1"></span>
                 <input onblur="validarNombres()" name="nombres" type="text" id="nombres" class=" inputFormulario col-md-12 mb-2"
                     placeholder="Ejemplo: Rosa Espinoza" >
-                <label for="apellidos">Ingrese apellidos del paciente:</label>
+                <label for="apellidos">Ingrese apellidos del paciente:</label> <span id="apellidos1" ></span>
                 <input onblur="validarApellidos()" name="apellidos" type="text" id="apellidos" class="inputFormulario col-md-12 mb-2"
                     placeholder="Ejemplo: Huerta Castañeda " >
-                <label for="edad">Ingrese edad del paciente:</label>
-                <input onblur="validarEdad()" name="edad" type="number" id="edad" class="inputFormulario col-md-12 mb-2" placeholder="Ingrese un número"
+                <label for="edad">Ingrese edad del paciente:</label> <span id="edad1"></span>
+                <input onblur="validarEdad()" name="edad" type="text" id="edad" class="inputFormulario col-md-12 mb-2" placeholder="Ingrese un número"
                     >
-                <label for="email">Ingrese correo electrónico:</label>
+                <label for="email">Ingrese correo electrónico:</label> <span id="email1"></span>
                 <input onblur="validarCorreo()" name="email" type="email" id="email" class="inputFormulario col-md-12 mb-2"
                     placeholder="Formato: micorreo@mail.com" >
                 <label for="especialidad">Escoja especialidad:</label>
