@@ -136,7 +136,7 @@ botonSubmit.addEventListener("click", function(evento){
     let nombres = document.getElementById("nombres").value
     let rut = document.getElementById("rut").value
     let especialidad = document.getElementById("especialidad").selectedIndex;
-    let opcionesEspecialidad = document.getElementById("especialidad").options;
+    let opcionesEspecialidad = document.getElementById("especialidad").value;
     let hora = document.getElementById("hora").value;
 
     if(fecha == ""){
@@ -151,10 +151,13 @@ botonSubmit.addEventListener("click", function(evento){
         alert("nombres vacío")
     } else if(rut == ""){
         alert("campo rut vacío")
-    } else {
-        alert("hola")
+    } else if(hora == "seleccioneHora"){
+        alert("Seleccione horario de atención")
+    } else if(opcionesEspecialidad == "seleccioneEspecialidad"){
+        alert("Seleccione especialidad")
+    } else{
+        alert("HOLA")
     }
-
 })
 
 
